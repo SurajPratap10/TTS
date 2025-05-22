@@ -70,13 +70,13 @@ const VOICE_STYLES: { [key: string]: { emoji: string } } = {
 
 const BUTTON_TEXTS: { [key: string]: string } = {
   lecture:
-    "Let’s begin with the concept of limits—how functions behave as inputs approach a particular value.For example, the limit of (sin x)/x as x approaches zero is one, a foundational idea in calculus.This principle leads us directly into the derivative, which measures how a function changes at any given point.",
+    "Welcome to the AI E-Learning Course! Gain core AI skills through interactive lessons and projects in machine learning. Perfect for beginners and those seeking deeper knowledge. Enjoy learning!",
   story:
-    "In the dead of night, the forest held its breath.Then, with a crack of thunder, the sky split open and she emerged—glowing, fierce, unstoppable.No one knew where she came from, only that nothing would ever be the same again.",
+    "The Azure Starling, a vibrant new bird species. Known for its striking blue feathers and melodic song, it thrives in tropical forests. Discover its unique behaviors and habitat today!",
   advertisement:
-    "Tired of pens that smudge and notebooks that fall apart?Discover ClarityStation—where every page, pen, and pencil is crafted for creators who care.Write sharper, sketch smoother, and bring your best ideas to life with ClarityStation.",
+    "Transform your mornings with our Smart Coffee Maker. Brew the perfect cup with ease. Set your preferences and wake up to fresh coffee every day. Order now for a smarter start!",
   podcast:
-    "Welcome to The Thinking Thread, where ideas unravel and curiosity takes the lead.Each week, we dive into the minds of creators, thinkers, and risk-takers reshaping the world.Get ready to pause, ponder, and plug in—your journey starts now.",
+    "Welcome to 'AI Insights',your weekly update on the latest developments in artificial intelligence. From breakthroughs in machine learning to ethical AI, we cover it all. Stay tuned and stay informed!",
 };
 
 type TextToSpeechIslandProps = {};
@@ -275,13 +275,13 @@ const TextToSpeechComponent = () => {
 
     if (isPlaying && currentPlayingVoiceId === selectedVoice.voiceId) {
       stopCurrentAudio();
-      setActiveButton(null); // Reset activeButton to allow other buttons to play
+      setActiveButton(null); 
       return;
     }
 
     if (audioRef.current && currentPlayingVoiceId !== selectedVoice.voiceId) {
       stopCurrentAudio();
-      setActiveButton(null); // Reset activeButton for new voice
+      setActiveButton(null); 
     }
 
     await playAudio(text, selectedVoice.voiceId);
@@ -693,7 +693,7 @@ const VoiceCard: React.FC<{ voice: Voice }> = ({ voice }) => (
       <div className="p-6">
         <p className="text-sm text-gray-600 leading-relaxed">Welcome to the AI E-Learning Course! Gain core AI skills through interactive lessons and projects in machine learning, neural networks, and data analysis. Perfect for beginners and those seeking deeper knowledge. Enjoy learning!</p>
       </div>
-      <div className="p-2 bg-gray-100 rounded-xl">
+      <div className="absolute bottom-0 left-0 p-2 bg-gray-100 rounded-xl">
         {/* Top row with 3 buttons */}
         <div className="grid grid-cols-3 gap-2 mb-2">
           <button
