@@ -14,35 +14,19 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #9ca3af;
 }
-.gradient-border-tx {
-  background: linear-gradient(#C516E1, #FC6337);
-  padding: 6px;
-  border-radius: 1.85rem;
-  }  
 .swipe-container {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  padding: 10px 0;
+  padding: 4px 0;
   gap: 10px;
 }
 .swipe-container::-webkit-scrollbar {
   display: none;
 }
 .gradient-border-tx {
-  background: linear-gradient(#C516E1, #FC6337);
-  padding: 6px;
-  border-radius: 1.85rem;
-  }  
-.swipe-container {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  padding: 10px 0;
-  gap: 32px;
-}
-.swipe-container::-webkit-scrollbar {
-  display: none;
-}
+  background: linear-gradient(to top, #FC6337, #c516e1, rgb(225, 22, 181));
+  padding: 4px;
+  border-radius: 1.75rem;
+} 
