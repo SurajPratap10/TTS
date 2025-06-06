@@ -1,5 +1,3 @@
-TTS WEBFLOW CODE:
-
 <script>
 (function ({
   languageTarget,
